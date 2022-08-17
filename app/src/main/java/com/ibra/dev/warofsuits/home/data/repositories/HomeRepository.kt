@@ -5,6 +5,7 @@ import com.ibra.dev.warofsuits.base.utils.simpleNameClass
 import com.ibra.dev.warofsuits.home.data.dao.CardDao
 import com.ibra.dev.warofsuits.home.data.models.Card
 import com.ibra.dev.warofsuits.home.domain.repositories.IHomeRepository
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 class HomeRepository @Inject constructor(

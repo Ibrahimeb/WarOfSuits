@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_diamonds.xml" value="0.306" />
+        <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.306" />
+        <entry key="app/src/main/res/drawable/ic_spades.xml" value="0.306" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3441497802734375" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.2203125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21927083333333333" />
+        <entry key="app/src/main/res/layout/view_poker_card.xml" value="0.46333669026692714" />
       </map>
     </option>
   </component>
