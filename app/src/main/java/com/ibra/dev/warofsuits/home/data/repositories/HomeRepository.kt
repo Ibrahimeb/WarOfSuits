@@ -2,10 +2,9 @@ package com.ibra.dev.warofsuits.home.data.repositories
 
 import android.util.Log
 import com.ibra.dev.warofsuits.base.utils.simpleNameClass
-import com.ibra.dev.warofsuits.home.data.dao.CardDao
-import com.ibra.dev.warofsuits.home.data.models.Card
+import com.ibra.dev.warofsuits.card.data.dao.CardDao
+import com.ibra.dev.warofsuits.card.data.models.Card
 import com.ibra.dev.warofsuits.home.domain.repositories.IHomeRepository
-import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 class HomeRepository @Inject constructor(

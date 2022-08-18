@@ -1,4 +1,4 @@
-package com.ibra.dev.warofsuits.home.data.models
+package com.ibra.dev.warofsuits.card.data.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

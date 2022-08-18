@@ -1,7 +1,7 @@
-package com.ibra.dev.warofsuits.home.di
+package com.ibra.dev.warofsuits.card.data.di
 
 import com.ibra.dev.warofsuits.base.database.data.AppDataBase
-import com.ibra.dev.warofsuits.home.data.dao.CardDao
+import com.ibra.dev.warofsuits.card.data.dao.CardDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

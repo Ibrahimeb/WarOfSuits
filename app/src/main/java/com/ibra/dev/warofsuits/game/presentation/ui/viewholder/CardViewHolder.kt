@@ -3,10 +3,8 @@ package com.ibra.dev.warofsuits.game.presentation.ui.viewholder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ibra.dev.warofsuits.base.utils.formatNumberCard
-import com.ibra.dev.warofsuits.base.utils.getSuitsIcon
+import com.ibra.dev.warofsuits.card.data.models.Card
 import com.ibra.dev.warofsuits.databinding.ViewPokerCardBinding
-import com.ibra.dev.warofsuits.home.data.models.Card
 
 class CardViewHolder(private val binding: ViewPokerCardBinding) :
     RecyclerView.ViewHolder(binding.root) {
@@ -18,10 +16,5 @@ class CardViewHolder(private val binding: ViewPokerCardBinding) :
         }
     }
 
-        fun render(card: Card) {
-            with(binding){
-                tvCardNumber.text = card.number.formatNumberCard()
-                ivSuitsIcon.setImageDrawable(card.suits.getSuitsIcon(binding.root.context))
-            }
-        }
-    }
+    fun render(card: Card) {}
+}

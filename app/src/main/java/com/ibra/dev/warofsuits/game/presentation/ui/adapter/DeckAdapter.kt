@@ -3,7 +3,7 @@ package com.ibra.dev.warofsuits.game.presentation.ui.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ibra.dev.warofsuits.game.presentation.ui.viewholder.CardViewHolder
-import com.ibra.dev.warofsuits.home.data.models.Card
+import com.ibra.dev.warofsuits.card.data.models.Card
 
 class DeckAdapter(private val playerDeck: List<Card>) : RecyclerView.Adapter<CardViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {

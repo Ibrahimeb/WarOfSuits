@@ -2,8 +2,8 @@ package com.ibra.dev.warofsuits.home.domain.usecase
 
 import android.util.Log
 import com.ibra.dev.warofsuits.base.utils.simpleNameClass
-import com.ibra.dev.warofsuits.home.data.models.Card
-import com.ibra.dev.warofsuits.home.data.models.Suits
+import com.ibra.dev.warofsuits.card.data.models.Card
+import com.ibra.dev.warofsuits.card.data.models.Suits
 import com.ibra.dev.warofsuits.home.domain.repositories.IHomeRepository
 import com.ibra.dev.warofsuits.home.presentation.usecase.ICreateDeckUseCase
 import javax.inject.Inject

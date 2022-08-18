@@ -2,7 +2,7 @@ package com.ibra.dev.warofsuits.game.domain.usecase
 
 import com.ibra.dev.warofsuits.game.domain.repositories.IGameRepository
 import com.ibra.dev.warofsuits.game.presentation.usecase.IDealerUseCase
-import com.ibra.dev.warofsuits.home.data.models.Card
+import com.ibra.dev.warofsuits.card.data.models.Card
 import javax.inject.Inject
 
 class DealerUseCase @Inject constructor(

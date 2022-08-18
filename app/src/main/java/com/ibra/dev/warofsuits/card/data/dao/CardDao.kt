@@ -1,9 +1,9 @@
-package com.ibra.dev.warofsuits.home.data.dao
+package com.ibra.dev.warofsuits.card.data.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.ibra.dev.warofsuits.home.data.models.Card
+import com.ibra.dev.warofsuits.card.data.models.Card
 
 @Dao
 interface CardDao {

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ibra.dev.warofsuits.game.presentation.usecase.IDealerUseCase
-import com.ibra.dev.warofsuits.home.data.models.Card
+import com.ibra.dev.warofsuits.card.data.models.Card
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

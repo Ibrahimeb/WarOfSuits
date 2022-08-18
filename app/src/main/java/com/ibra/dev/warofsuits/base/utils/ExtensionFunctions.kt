@@ -3,7 +3,7 @@ package com.ibra.dev.warofsuits.base.utils
 import android.content.Context
 import androidx.appcompat.content.res.AppCompatResources
 import com.ibra.dev.warofsuits.R
-import com.ibra.dev.warofsuits.home.data.models.Suits
+import com.ibra.dev.warofsuits.card.data.models.Suits
 
 
 inline fun <reified T> T.simpleNameClass(): String = T::class.java.simpleName

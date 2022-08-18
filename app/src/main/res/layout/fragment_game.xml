@@ -11,6 +11,8 @@
         android:layout_width="@dimen/spacing_empty"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/spacing_4"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +22,8 @@
         android:layout_width="@dimen/spacing_empty"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/spacing_4"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />

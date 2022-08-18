@@ -18,5 +18,12 @@
         android:id="@+id/gameFragment"
         android:name="com.ibra.dev.warofsuits.game.presentation.ui.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="namePlayerOne"
+            app:argType="string" />
+        <argument
+            android:name="namePlayerTwo"
+            app:argType="string" />
+    </fragment>
 </navigation>
