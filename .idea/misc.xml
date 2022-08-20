@@ -9,11 +9,16 @@
         <entry key="app/src/main/res/drawable/ic_spades.xml" value="0.306" />
         <entry key="app/src/main/res/layout-land/fragment_game.xml" value="0.3492063492063492" />
         <entry key="app/src/main/res/layout-land/fragment_home.xml" value="0.3492063492063492" />
+        <entry key="app/src/main/res/layout-land/view_poker_card_back.xml" value="0.1865079365079365" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3441497802734375" />
+        <entry key="app/src/main/res/layout/dialog_fragment_congrats.xml" value="0.21927083333333333" />
+        <entry key="app/src/main/res/layout/fragment_congrats.xml" value="0.2203125" />
         <entry key="app/src/main/res/layout/fragment_game.xml" value="0.2203125" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/view_body_card.xml" value="0.39221014492753625" />
+        <entry key="app/src/main/res/layout/view_deck_indicator.xml" value="0.35597826086956524" />
         <entry key="app/src/main/res/layout/view_poker_card.xml" value="0.46333669026692714" />
+        <entry key="app/src/main/res/layout/view_poker_card_back.xml" value="0.47223256429036453" />
       </map>
     </option>
   </component>

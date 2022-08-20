@@ -29,14 +29,14 @@ class HomeFragment : Fragment() {
         with(binding) {
             btnHomeGoToPlay.setOnClickListener {
                 when {
-                    tfHomePageNamePlayerOne?.text?.isEmpty() == true -> tflHomePageNamePlayerOne.error =
+                    tfHomePageNamePlayerOne.text?.isEmpty() == true -> tflHomePageNamePlayerOne.error =
                         "name is required"
-                    tfHomePageNamePlayerTwo?.text?.isEmpty() == true -> tflHomePageNamePlayerTwo.error =
+                    tfHomePageNamePlayerTwo.text?.isEmpty() == true -> tflHomePageNamePlayerTwo.error =
                         "name is required"
                     else -> findNavController().navigate(
                         HomeFragmentDirections.actionHomeFragmentToGameFragment(
-                            namePlayerOne = tfHomePageNamePlayerOne?.text.toString(),
-                            namePlayerTwo = tfHomePageNamePlayerTwo?.text.toString()
+                            namePlayerOne = tfHomePageNamePlayerOne.text.toString(),
+                            namePlayerTwo = tfHomePageNamePlayerTwo.text.toString()
                         )
                     )
                 }
@@ -46,11 +46,11 @@ class HomeFragment : Fragment() {
 
     private fun listenTextOnChange(){
         with(binding){
-            tfHomePageNamePlayerOne?.doOnTextChanged { text, _, _, _ ->
+            tfHomePageNamePlayerOne.doOnTextChanged { text, _, _, _ ->
                 if (text.isNullOrEmpty().not()) tflHomePageNamePlayerOne.error = null
             }
 
-            tfHomePageNamePlayerTwo?.doOnTextChanged { text, _, _, _ ->
+            tfHomePageNamePlayerTwo.doOnTextChanged { text, _, _, _ ->
                 if (text.isNullOrEmpty().not()) tflHomePageNamePlayerTwo.error = null
             }
         }

@@ -6,33 +6,225 @@
     android:layout_height="match_parent"
     tools:context=".home.presentation.ui.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_game_page_player_one"
-        android:layout_width="@dimen/spacing_empty"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/spacing_4"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_game_page_player_two"
-        android:layout_width="@dimen/spacing_empty"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_4"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline_half_game_page_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_half_game_page_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <include
+        android:id="@+id/included_player_one_deck_indicator"
+        layout="@layout/view_deck_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/included_card_player_one"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_half_game_page_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_game_page_hint_deck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:text="@string/game_page_deck"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textSize="@dimen/text_size_hint_game"
+        app:layout_constraintEnd_toEndOf="@+id/included_player_one_deck_indicator"
+        app:layout_constraintStart_toStartOf="@+id/included_player_one_deck_indicator"
+        app:layout_constraintTop_toBottomOf="@+id/included_player_one_deck_indicator" />
+
+    <include
+        android:id="@+id/included_player_two_deck_indicator"
+        layout="@layout/view_deck_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/included_card_player_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_half_game_page_vertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_game_page_hint_player_two_deck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:text="@string/game_page_deck"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textSize="@dimen/text_size_hint_game"
+        app:layout_constraintEnd_toEndOf="@+id/included_player_two_deck_indicator"
+        app:layout_constraintStart_toStartOf="@+id/included_player_two_deck_indicator"
+        app:layout_constraintTop_toBottomOf="@+id/included_player_two_deck_indicator" />
+
+
+    <include
+        android:id="@+id/included_card_player_one"
+        layout="@layout/view_poker_card"
+        android:layout_width="@dimen/spacing_20"
+        android:layout_height="@dimen/spacing_25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002" />
+
+    <include
+        android:id="@+id/included_player_one_discard_indicator"
+        layout="@layout/view_deck_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_fight_game"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_half_game_page_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_half_game_page_horizontal" />
+
+
+    <TextView
+        android:id="@+id/tv_game_page_hint_discard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:text="@string/game_page_discard"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textSize="@dimen/text_size_hint_game"
+        app:layout_constraintEnd_toEndOf="@+id/included_player_one_discard_indicator"
+        app:layout_constraintStart_toStartOf="@+id/included_player_one_discard_indicator"
+        app:layout_constraintTop_toBottomOf="@+id/included_player_one_discard_indicator" />
+
+    <TextView
+        android:id="@+id/tv_game_page_hint_discard_player_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:text="@string/game_page_discard"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textSize="@dimen/text_size_hint_game"
+        app:layout_constraintEnd_toEndOf="@+id/included_player_two_discard_indicator"
+        app:layout_constraintStart_toStartOf="@+id/included_player_two_discard_indicator"
+        app:layout_constraintTop_toBottomOf="@+id/included_player_two_discard_indicator" />
+
+    <include
+        android:id="@+id/included_player_two_discard_indicator"
+        layout="@layout/view_deck_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_half_game_page_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/included_card_player_two" />
+
+    <TextView
+        android:id="@+id/tv_game_page_name_player_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_4"
+        android:textAppearance="@android:style/TextAppearance.Material.Body2"
+        android:textSize="@dimen/text_size_sub_title_game"
+        app:layout_constraintBottom_toTopOf="@+id/included_player_one_deck_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/included_player_one_deck_indicator"
+        app:layout_constraintStart_toStartOf="@+id/included_player_one_deck_indicator"
+        tools:text="player one" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_win_player_one"
+        android:layout_width="@dimen/spacing_25"
+        android:layout_height="@dimen/spacing_25"
+        app:layout_constraintBottom_toTopOf="@+id/included_player_one_discard_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/included_card_player_one"
+        app:layout_constraintStart_toStartOf="@+id/included_card_player_one"
+        app:layout_constraintTop_toTopOf="@+id/guideline_half_game_page_horizontal"
+        app:lottie_autoPlay="false"
+        app:lottie_rawRes="@raw/animation_trophy" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_win_player_two"
+        android:layout_width="@dimen/spacing_25"
+        android:layout_height="@dimen/spacing_25"
+        app:layout_constraintBottom_toTopOf="@+id/included_player_one_discard_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/included_card_player_two"
+        app:layout_constraintStart_toStartOf="@+id/included_card_player_two"
+        app:layout_constraintTop_toTopOf="@+id/guideline_half_game_page_horizontal"
+        app:lottie_autoPlay="false"
+        app:lottie_rawRes="@raw/animation_trophy" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_vs"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textSize="@dimen/text_size_sub_title_game"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/included_card_player_one"
+        app:layout_constraintEnd_toStartOf="@+id/included_card_player_two"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/included_card_player_one"
+        app:layout_constraintTop_toTopOf="@+id/included_card_player_one" />
+
+    <include
+        android:id="@+id/included_card_player_two"
+        layout="@layout/view_poker_card"
+        android:layout_width="@dimen/spacing_20"
+        android:layout_height="@dimen/spacing_25"
+        app:layout_constraintBottom_toBottomOf="@+id/included_card_player_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/included_card_player_one" />
+
+    <TextView
+        android:id="@+id/tv_game_page_name_player_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_4"
+        android:textAppearance="@android:style/TextAppearance.Material.Body2"
+        android:textSize="@dimen/text_size_sub_title_game"
+        app:layout_constraintBottom_toTopOf="@+id/included_player_two_deck_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/included_player_two_deck_indicator"
+        app:layout_constraintStart_toStartOf="@+id/included_player_two_deck_indicator"
+        tools:text="player two" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_fight_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_4"
+        android:text="@string/game_btn_lay_down_card"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_validate_game"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_validate_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_hint_validate"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_fight_game"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reset_game"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_fight_game"
+        app:layout_constraintTop_toTopOf="@+id/btn_fight_game" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_reset_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_btn_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_fight_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_validate_game"
+        app:layout_constraintTop_toTopOf="@+id/btn_fight_game" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

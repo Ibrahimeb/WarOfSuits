@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+
+        <TextView
+            android:id="@+id/tv_winner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:layout_marginEnd="@dimen/spacing_6"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/congrats_winner"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_sub_title_game"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_win_player_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btn_new_game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_winner_name"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_victory" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_new_game"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="@dimen/spacing_empty"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6"
+            android:layout_marginEnd="@dimen/spacing_6"
+            android:layout_marginBottom="@dimen/spacing_4"
+            android:text="@string/congrats_btn_new_game"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="@dimen/spacing_1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

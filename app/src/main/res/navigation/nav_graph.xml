@@ -25,5 +25,17 @@
         <argument
             android:name="namePlayerTwo"
             app:argType="string" />
+        <action
+            android:id="@+id/action_gameFragment_to_congratsFragment"
+            app:destination="@id/congratsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratsFragment"
+        android:name="com.ibra.dev.warofsuits.game.presentation.ui.CongratsFragment"
+        android:label="fragment_congrats"
+        tools:layout="@layout/fragment_congrats" >
+        <argument
+            android:name="winnerName"
+            app:argType="string" />
     </fragment>
 </navigation>
